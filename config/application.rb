@@ -18,6 +18,7 @@ module Blog
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.hosts << "*.dev.almostpurple.com"
+    config.hosts << "blog.almostpurple.com"
+    config.hosts << "*.blog.almostpurple.com"
   end
 end

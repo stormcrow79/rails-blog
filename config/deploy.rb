@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.15.0"
 
-set :application, "my_app_name"
+set :application, "blog"
 set :repo_url, "https://github.com/stormcrow79/rails-blog.git"
 
 # Default branch is :master

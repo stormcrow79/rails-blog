@@ -1,6 +1,9 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
-  slug = request.subdomain.split('.')[0]
-  ActiveRecord::Base.connected_to(role: :writing, shard: slug.to_sym)
+  connects_to shards: {
+    default: { writing: :primary, reading: :primary },
+    bravo: { writing: :bravo, reading: :bravo },
+    charlie: { writing: :charlie, reading: :charlie }
+  }
 end
